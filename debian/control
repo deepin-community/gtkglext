@@ -1,0 +1,62 @@
+Source: gtkglext
+Section: oldlibs
+Priority: optional
+Maintainer: Gert Wollny <gewo@debian.org>
+Build-Depends:
+ debhelper (>= 10),
+ libgl1-mesa-dev | libgl-dev,
+ libglu1-mesa-dev | libglu-dev,
+ libgtk2.0-dev (>= 2.20),
+ libice-dev,
+ libpango1.0-dev,
+ libsm-dev,
+ libxmu-dev,
+ libxt-dev,
+Standards-Version: 4.1.4
+Homepage: http://projects.gnome.org/gtkglext/
+Vcs-Git: https://salsa.debian.org/gewo/gtkglext.git
+Vcs-Browser: https://salsa.debian.org/gewo/gtkglext
+
+Package: libgtkglext1-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libgl1-mesa-dev | libgl-dev,
+ libglu1-mesa-dev | libglu-dev,
+ libgtk2.0-dev,
+ libgtkglext1 (= ${binary:Version}),
+ libice-dev,
+ libpango1.0-dev,
+ libsm-dev,
+ libxmu-dev,
+ libxt-dev,
+ ${misc:Depends},
+Description: OpenGL Extension to GTK+ (development files)
+ GtkGLExt provides the GDK objects to support OpenGL rendering in GTK+,
+ and GtkWidget API add-ons to make GTK+ widgets OpenGL-capable.
+ .
+ This package contains files that you need to compile programs using
+ libgtkglext.
+
+Package: libgtkglext1
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: OpenGL Extension to GTK+ (shared libraries)
+ GtkGLExt provides the GDK objects to support OpenGL rendering in GTK+,
+ and GtkWidget API add-ons to make GTK+ widgets OpenGL-capable.
+
+Package: libgtkglext1-doc
+Section: doc
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+Description: OpenGL Extension to GTK+ (documentation)
+ GtkGLExt provides the GDK objects to support OpenGL rendering in GTK+,
+ and GtkWidget API add-ons to make GTK+ widgets OpenGL-capable.
+ .
+ This package contains documentation for libgtkglext.

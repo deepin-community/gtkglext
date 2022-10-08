@@ -1,0 +1,12 @@
+examples/*.c /usr/share/doc/libgtkglext1-dev/examples
+examples/*.h /usr/share/doc/libgtkglext1-dev/examples
+examples/*.lwo /usr/share/doc/libgtkglext1-dev/examples
+examples/*.rgb /usr/share/doc/libgtkglext1-dev/examples
+examples/Makefile.am /usr/share/doc/libgtkglext1-dev/examples
+/usr/share/aclocal
+usr/include
+usr/lib/*/gtkglext-1.0
+usr/lib/*/lib*.a
+usr/lib/*/lib*.la
+usr/lib/*/lib*.so
+usr/lib/*/pkgconfig
